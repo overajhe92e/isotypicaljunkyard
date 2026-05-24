@@ -1,6 +1,6 @@
 SMODS.Joker { --Original Character by ocksie
     key = "oxy",
-    rarity = "iso_apoc",
+    rarity = "fizz_apoc",
     cost = 16,
     atlas = "other_ocs",
     pos = {
