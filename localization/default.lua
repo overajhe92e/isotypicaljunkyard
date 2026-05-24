@@ -1,10 +1,111 @@
 local na = "{C:red}No Effect{}"
+local nc = "{C:red}No code!{}"
+local nf = "{C:red}Missing Art!{}"
 
 return {
 	descriptions = {
 		Back = {
 		},
 		Blind = {
+			bl_fizz_ricardo = {
+				name = "The Middle Big Brother",
+				text = {
+					"MY HAIR COUPOOOOOOOO",
+					"OOOOOOOOOOOOOOOOOOOO",
+					"OOOOOOOOOOOOOOOONS!!"
+				}
+			},
+			bl_fizz_rng = {
+				name = "RNG",
+				text = {
+					"Base Mult is randomized from X0.5 to X4",
+					"Reward is randomized from $5 to $8",
+					"Changes on game restart"
+				}
+			},
+			bl_fizz_unstable = {
+				name = "Destabilization",
+				text = {
+					"If this blind is not defeated",
+					"within 2 Hands,",
+					"Fight an Omega Blind"
+				}
+			},
+			bl_fizz_diansu = {
+				name = "Diansu Vulkarch",
+				text = {
+					"Run, That's all you CAN do!"
+				}
+			},
+			bl_fizz_oxid = {
+				name = "Oxidyzation",
+				text = {
+					na
+				}
+			},
+			bl_fizz_spk = {
+				name = "The Shyness",
+				text = {
+					"-1 Chip on scoring",
+					"{C:inactive}And..?{}"
+				}
+			},
+			bl_fizz_recl = {
+				name = "The Eyes",
+				text = {
+					"EVIL"
+				}
+			},
+			bl_fizz_sph = {
+				name = "The Knife",
+				text = {
+					na
+				}
+			},
+			bl_fizz_sol = {
+				name = "The Scaling",
+				text = {
+					"Multiplies Blind size by",
+					"X1.25 when a hand is played"
+				}
+			},
+			bl_fizz_sph_ex = {
+				name = "The Knife EX",
+				text = {
+					"If first hand does not score over",
+					"50% of Blind Requirement,",
+					"Destroy a Random Joker",
+					"when a hand is played"
+				}
+			},
+			bl_fizz_sol_ex = {
+				name = "The Scaling EX",
+				text = {
+					"Rapidly Scales Blind Size",
+					"When a hand is played"
+				}
+			},
+			bl_fizz_oxid_ex = {
+				name = "Oxidyzation EX",
+				text = {
+					"Debuffs all Jokers",
+					"Reduces blind size with the equation",
+					"(???)"
+				}
+			},
+			bl_fizz_spk_ex = {
+				name = "The Shyness EX",
+				text = {
+					"^0.7 Chips and Mult",
+					"after Scoring finishes"
+				}
+			},
+			bl_fizz_oxid_bunny = {
+				name = "The Hater",
+				text = {
+					"Debuffs all Bunny Jokers"
+				}
+			}
 		},
 		Edition = {
 		},
@@ -31,9 +132,13 @@ return {
 			j_fizz_astro_n = {
 				name = {
 					"Astro Novalite",
+					"{C:blue,s:0.7}The Sleeper{}"
 				},
 				text = {
-					na
+					"When a {C:planet}Planet{} card is used",
+					"Level up {C:legendary}all hands{} to the number",
+					"of Unique {C:planet}Planet{} cards used this run",
+					"{C:inactive}(Currently +#1# Levels){}"
 				}
 			},
 			j_fizz_seraph = {
@@ -50,14 +155,15 @@ return {
 				},
 				text = {
 					"Redeeming {C:attention}Vouchers{} reduces all",
-					"shop item Costs by {C:attention}-1{}",
-					"{C:inactive}Ignores Blank Voucher{}"
+					"shop item Costs by {C:attention}1%{}",
+					"{C:inactive}Ignores Blank Voucher{}",
+					"{C:inactive}Current Discount: #2#%{}"
 				}
 			},
 			j_fizz_oxidyze = { -- LMAOOOOOOOOOOOOOOOO
 				name = {
 					"Oxidyze",
-					"{s:0.7,C:red}The Most Bullied OC out there{}"
+					"{s:0.7,C:red}The Perfect Punching Bag{}"
 				},
 				text = {
 					"Copies the ability of {C:attention}Jokers{}",
@@ -68,9 +174,11 @@ return {
 				name = {
 					"{C:pastel_yellow}O{}{C:pink}x{}y"
 				},
-				text = { 
-					"Retriggers {C:attention}Steel Cards{} #1# Times",
-					"Scoring Steel Card adds {C:attention}+1{} Retrigger",
+				text = {
+					"Retriggers {C:attention}Steel Cards #2#+#1#{} Times",
+					"Scoring {C:attention}Steel Cards{} adds {C:attention}+1{} Extra Retrigger",
+					"Resets extra retriggers at the end of the round",
+					"{C:inactive}( Currently #3# total retriggers ){}"
 				}
 			},
 			j_fizz_a_certain_oxidyze = { -- Deal +65% Damage to < Fragile Bunnies >
@@ -80,7 +188,8 @@ return {
 				},
 				text = {
 					na,
-					"{C:inactive}\"The Smoke was Blue...\"{}",
+					nc,
+					"{C:red}\"HE'S USING 5 MANG\"{}",
 				}
 			},
 			j_fizz_recluse = {
@@ -109,7 +218,37 @@ return {
 					{
 						"Current Prescripts",
 						"#6#",
-						"#7#", --ARAYA SHUT UP
+						"#7#", --[[
+						
+                                l
+               .     .      .   f. +  '  :.
+            cY/U<"c]prjzn$Qkd[._J# #JCW#|$&
+           C$JaW<$$@]$$<$$$$LC$*u$`MCr$$QQ$h
+          -fu/|Jc$@-*%#)qx$$\M$Wu$.UL_a (cO
+              <   .    .   .!f. uq    [  [v
+              ^                          [
+              ]
+              ]  "         '    ] !!
+              _ ;\   t    :Q      &,
+               "wz,[BvUCCC$wCCCJ|nb'
+              `!*p   !#$$$$$$#`{    hQ      '
+               !$$$B ?M8$$$$$$$$$z0^8Q
+                $$l  xW$$$$$$$$B{ >h${
+                J$Xd$$$$$$$$$$$$$$$$${    l  ."
+                n$$$$$$$$$$$$$$$$$$$$!         !
+                I$$$$$$uYB$Bq >$$$$$$l    ^
+                ,*$$$$$L+    <h$$$$$f     a
+                ;Mvq@$$$$$$$$$$$$B]a     ia
+                 B ;;! _*$$$$$$$@.       ia
+                        h$$$$$$$_        ia  '
+          O)            n$$$$$$j  ,      ia  ^
+          OC          1_ b$$$$J    f:    )a   x
+          Ow    ^ <x{.   ;8$$u     .     /a
+          ($    . !a"^bj0{|$_      X`    0O     :
+          _8~     '.q_lu!   >]aUX        B]       <
+                    %'        Q(         :
+
+						]]
 						"#8#",
 						"{X:default,C:white}X#1#{} Blind Req., {C:blue}+#2#{} Chips, {C:red}+#3#{} Mult,",
 						"{X:blue,C:white}X#4#{} Chips, {X:red,C:white}X#5#{} Mult"
@@ -141,6 +280,75 @@ return {
 				text = {
 					"Hermes must REALLY like Roland."
 				}
+			},
+			j_fizz_muga = {
+				name = {
+					"Muga"
+				},
+				text = {
+					"{X:red,C:white}X2.5{} Mult {C:red}but...{}",
+					"Score and Hand Calculation is {C:red}hidden{}"
+				}
+			},
+			j_fizz_oxidyze_scythe = {
+				name = {
+					"{C:fizz_oxi_gradient}Weeping Blood{}",
+					"{C:red,s:0.65}The Crimson Teardrop's Scythe{}"
+				},
+				text = {
+					na
+				}
+			},
+			j_fizz_stellae = {
+				name = {
+					"{C:fizz_isot_grad}Stellae{}",
+					"{C:fizz_isot_grad,s:0.65}The Purple Slumber's Scythe{}"
+				},
+				text = {
+					na
+				}
+			},
+			j_fizz_oxidyze_SB = {
+				name = {
+					"{C:red}Skullbuster{}",
+					"{C:red,s:0.65}The Crimson Teardrop's Hammer{}"
+				},
+				text = {
+					na, nc
+				}
+			},
+			j_fizz_sparky = {
+				name = "Sparky",
+				text = {
+					na, nc
+				}
+			},
+			j_fizz_seraph_vglm = {
+				name = "Seraph V.Glm",
+				text = {
+					na, nc
+				}
+			},
+			j_fizz_broken_seraph = {
+				name = "Broken Seraph",
+				text = {
+					na, nc
+				}
+			},
+			j_fizz_solinium = {
+				name = "Solinium",
+				text = {
+					na, nc
+				}
+			},
+			j_fizz_xeno = {
+				name = "Xeno",
+				text = {
+					"If played hand contains a",
+					"{C:hearts}Heart{} and a {C:spades}Spade{}",
+					"{C:legendary}Balance{} Chips and Mult",
+					nc
+				}
 			}
 		},
 		Other = {
@@ -151,32 +359,24 @@ return {
 		},
 		Tag = {
 			tag_fizz_junktag = {
-				name = "Junk Tag",
+				name = "Disarray Pack Tag",
 				text = {
 					"Gives a free",
-					"{C:attention}Junkyard Pack Beta{}"
+					"{C:attention}Disarray Pack{}"
 				}
 			},
 			tag_fizz_terminus_tag = {
 				name = "Terminus Tag",
 				text = {
-					"Shop has a {C:red}full price{}",
+					"Shop has a",
 					"{C:fizz_terminus_global}Terminus Joker{}",
-					"{C:inactive,s:0.7}Tag bloat???{}"
 				}
 			},
-			tag_fizz_every_fucking_pack = {
-				name = "Every Fucking Pack In The Mod",
-				text = {
-					"Gives {C:attention}every{} Isotypical's Junkyard",
-					"{C:attention}Booster Pack{}"
-				}
-			}, --may not be used ever
-			tag_fizz_exrare_tag = {
-				name = "Ex. Rare Tag",
+			tag_fizz_apoc_tag = {
+				name = "Apocryphal Tag",
 				text = {
 					"Shop has an",
-					"{C:fizz_exrare}Ex. Rare{} Joker",
+					"{C:iso_apoc}Apocryphal{} Joker",
 				}
 			},
 			tag_fizz_legend_tag = {
@@ -184,6 +384,8 @@ return {
 				text = {
 					"Shop has a",
 					"{C:legendary}Legendary{} Joker",
+					"{C:green}1 in 4{} Chance for ",
+					"{X:default,C:red}X4{} Blind Size instead"
 				}
 			},
 		},
@@ -204,7 +406,6 @@ return {
 			k_fizz_omega = "Omega",
 			k_fizz_apoc = "Apocryphal",
 			k_fizz_terminus = "Terminus",
-			
 		},
 		high_scores = {},
 		labels = {

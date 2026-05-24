@@ -118,10 +118,10 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-	key = 'other_jokers',
+	key = 'commonrare',
 	px = 71,
 	py = 95,
-	path = 'other_jokers.png',
+	path = 'commons-rares.png',
 	atlas_table = 'ASSET_ATLAS'
 }
 
@@ -199,35 +199,6 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
-	key = "unbalanced",
-	default = "j_fizz_oxyemp",
-	cards = {
-	},
-	inject = function(self)
-		SMODS.ObjectType.inject(self)
-		self:inject_card(G.P_CENTERS.j_lucky_cat)
-	end,
-})
-
-SMODS.ObjectType({
-	key = "fucking_absurd",
-	default = "j_fizz_jokertoendalljokers",
-	cards = {
-		j_fizz_spkawk = true,
-		j_fizz_sphawk = true,
-		j_fizz_solawk = true,
-		j_fizz_spkawkclassic = true,
-		j_fizz_solawkclassic = true,
-		j_fizz_sphawkclassic = true,
-		j_fizz_winsweep = true
-	},
-	inject = function(self)
-		SMODS.ObjectType.inject(self)
-		self:inject_card(G.P_CENTERS.j_lucky_cat)
-	end,
-})
-
-SMODS.ObjectType({
 	key = "all_junk",
 	default = "j_fizz_solinium",
 	cards = {},
@@ -247,20 +218,28 @@ SMODS.ObjectType({
 	end,
 })
 
-SMODS.ObjectType({
-	key = "wire",
-	default = "j_fizz_steelwire",
-	cards = {
-		j_fizz_steelwire = true
-	},
-})
-
 SMODS.Atlas {
 	key = 'dw',
 	px = 71,
 	py = 95,
 	path = 'dandysworld.png',
 	atlas_table = 'ASSET_ATLAS'
+}
+
+SMODS.Atlas {
+	key = "CustomBoosters",
+	px = 71,
+	py = 95,
+	path = "CustomBoosters.png",
+	atlas_table = "ASSET_ATLAS"
+}
+
+SMODS.Atlas {
+	key = "CustomEnhancements",
+	px = 71,
+	py = 95,
+	path = "CustomEnhancements.png",
+	atlas_table = "ASSET_ATLAS"
 }
 
 SMODS.Atlas {
@@ -272,10 +251,10 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-	key = 'other_ocs',
+	key = 'apocleg',
 	px = 71,
 	py = 95,
-	path = 'other_ocs.png',
+	path = 'apoc-legend.png',
 	atlas_table = 'ASSET_ATLAS'
 }
 
@@ -518,7 +497,7 @@ iso.configbs = SMODS.current_mod.config
 
 --diansu video
 function fizz_custom_video(name, buttonname)
-	local file_path = SMODS.Mods["isoatro"].path .. "/resources/" .. name .. ".ogv"
+	local file_path = SMODS.Mods["disarray"].path .. "/resources/" .. name .. ".ogv"
 	local file = NFS.read(file_path)
 	love.filesystem.write("diansumeme.ogv", file)
 	local video_file = love.graphics.newVideo('diansumeme.ogv')

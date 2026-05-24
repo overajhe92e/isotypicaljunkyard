@@ -12,7 +12,7 @@ end
 
 SMODS.current_mod.menu_cards = function()
 	return {
-		{key = 'j_fizz_iso'}
+		{key = 'j_perkeo'}
 	}
 end
 

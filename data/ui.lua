@@ -145,13 +145,17 @@ SMODS.DrawStep {
 G.FUNCS.fizz_KILL = function(e)
     local card = e.config.ref_table
     local c = card.ability.extra
-    c.retrig = math.floor(c.retrig * 1.5)
-    SMODS.calculate_effect({ message = ":3" }, card)
+    if next(SMODS.find_card("j_fizz_maxie")) then
+        c.base_retrig = c.base_retrig + 2
+    else
+        c.base_retrig = c.base_retrig + 1
+    end
+    SMODS.calculate_effect({ message = "Murder!" }, card)
     G.E_MANAGER:add_event(Event({
         trigger = 'after',
         delay = 1 * G.SETTINGS.GAMESPEED,
         func = function()
-            SMODS.destroy_cards(SMODS.find_card("j_fizz_Oxy"))
+            SMODS.destroy_cards(SMODS.find_card("j_fizz_oxidyze"))
             play_sound("fizz_gore5",1,1)
             return true
         end
@@ -164,7 +168,7 @@ G.FUNCS.fizz_KILLHIM = function(e)
 
     local can_use = false -- can be any condition you want
 
-    if next(SMODS.find_card("j_fizz_Oxy")) then
+    if next(SMODS.find_card("j_fizz_oxidyze")) then
         can_use = true
     end
 
@@ -195,7 +199,7 @@ function Card:highlight(is_highlighted)
         self.children.fizz_KILL:remove()
         self.children.fizz_KILL = nil
     end
-    if is_highlighted and self.config.center.key == "j_fizz_ocksie" then
+    if is_highlighted and self.config.center.key == "j_fizz_oxy" then
         self.children.fizz_KILL = killHIM(self)
     elseif self.children.fizz_KILL then
         self.children.fizz_KILL:remove()
