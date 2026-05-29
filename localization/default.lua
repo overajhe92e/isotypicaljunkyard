@@ -117,8 +117,10 @@ return {
 					"{C:fizz_light_purple}Isotypical{}"
 				},
 				text = {
-					"Back to the drawing board!",
-					na
+					"Select a joker to {C:red}Erase{}",
+					"from current profile",
+					"Gains {X:legendary,C:white}XMult+Chips{} for every",
+					"erased joker"
 				}
 			},
 			j_fizz_astro_s = {
@@ -181,7 +183,7 @@ return {
 					"{C:inactive}( Currently #3# total retriggers ){}"
 				}
 			},
-			j_fizz_a_certain_oxidyze = { -- Deal +65% Damage to < Fragile Bunnies >
+			j_fizz_a_certain_oxidyze = { -- Deal +65% Damage to < Pesky Rabbits > and < Distortions >
 				name = {
 					"The Crimson Teardrop",
 					"{s:0.7}Oxidyze{}"
@@ -202,8 +204,7 @@ return {
 			},
 			j_fizz_prescript = {
 				name = {
-					"{C:fizz_index_blue}The Index{}",
-					"{s:0.9}Prescripts{}"
+					"{C:fizz_index_blue}Prescript{}"
 				},
 				text = {
 					{
@@ -216,9 +217,9 @@ return {
 						"for every cleared {C:fizz_index_blue}Prescript{}"
 					},
 					{
-						"Current Prescripts",
-						"#6#",
-						"#7#", --[[
+						"Current Prescript",
+						"#6#", --[[
+						cause now i know that-
 						
                                 l
                .     .      .   f. +  '  :.
@@ -249,9 +250,6 @@ return {
                     %'        Q(         :
 
 						]]
-						"#8#",
-						"{X:default,C:white}X#1#{} Blind Req., {C:blue}+#2#{} Chips, {C:red}+#3#{} Mult,",
-						"{X:blue,C:white}X#4#{} Chips, {X:red,C:white}X#5#{} Mult"
 					}
 				}
 			},
@@ -286,8 +284,8 @@ return {
 					"Muga"
 				},
 				text = {
-					"{X:red,C:white}X2.5{} Mult {C:red}but...{}",
-					"Score and Hand Calculation is {C:red}hidden{}"
+					"{X:red,C:white}X2.5{} Mult",
+					"Score and Hand Calculation is {C:attention}hidden{}"
 				}
 			},
 			j_fizz_oxidyze_scythe = {
@@ -296,7 +294,10 @@ return {
 					"{C:red,s:0.65}The Crimson Teardrop's Scythe{}"
 				},
 				text = {
-					na
+					"X0.65 Blind Size if",
+					"played hand triggers",
+					"the {C:attention}Boss Blind{} ability",
+					"{C:inactive,s:0.7}nice bleed potency lmao{}"
 				}
 			},
 			j_fizz_stellae = {
@@ -305,7 +306,8 @@ return {
 					"{C:fizz_isot_grad,s:0.65}The Purple Slumber's Scythe{}"
 				},
 				text = {
-					na
+					"Fixed {C:attention}+(Requirement/10){} Score",
+					"after scoring finishes"
 				}
 			},
 			j_fizz_oxidyze_SB = {
@@ -314,13 +316,17 @@ return {
 					"{C:red,s:0.65}The Crimson Teardrop's Hammer{}"
 				},
 				text = {
-					na, nc
+					"Destroys a random",
+					"held in hand card",
+					"when a {C:attention}Stone Card{} scores"
 				}
 			},
 			j_fizz_sparky = {
-				name = "Sparky",
+				name = "Sparky Elle",
 				text = {
-					na, nc
+					"{C:green}1 in 2{} chance for",
+					"{C:mult}+5{} to {C:mult}+40{} Mult",
+					"Otherwise {C:chips}+25{} to {C:chips}+100{} Chips"
 				}
 			},
 			j_fizz_seraph_vglm = {
@@ -352,6 +358,16 @@ return {
 			}
 		},
 		Other = {
+			fizz_ext_erasure = {
+				name = "Erasure",
+				text = {
+					"Erasing a Joker will make it",
+					"{C:attention}not appear in collection{} AND",
+					"{C:attention}not appear in a run ever again.{}",
+					"{C:red,s:1.2,u:red}THIS EFFECT IS PERMANENT.{}",
+					"{C:inactive,s:0.7}This effect only applies to current profile{}"
+				}
+			}
 		},
 		Planet = {},
 		Spectral = {},
@@ -421,12 +437,6 @@ return {
 		poker_hand_descriptions = {},
 		poker_hands = {},
 		quips = {
-
-			--Reclusive Vessel
-			fizz_sphrecl_loss_1 = { "Fucking...", "{C:red,s:1.5}HOW.{}" },
-			fizz_sphrecl_loss_2 = { "HOW DID YOU EVEN {C:red}DIE???{}" },
-			fizz_sphrecl_loss_3 = { "Recluse is right,", "You {C:red}DO{} have a {C:red}skill issue!{}" },
-			fizz_sphrecl_loss_4 = { "I gave you {C:red}so much power,{}", "Just to watch you fail horribly.", "{C:fizz_dark_purple}You disappoint me, a lot.{}" },
 
 			--Seraph V.Glm
 			fizz_sph_wins_1 = { "Could have won faster with me." },
