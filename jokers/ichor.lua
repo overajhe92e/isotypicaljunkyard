@@ -9,9 +9,9 @@ SMODS.Joker {
         }
     },
     loc_vars = function(self, info_queue, card)
-        if G.GAME then
+        if G.jokers then
             for i = 1, #G.jokers.cards do
-            
+                
             end
         end
         return {
