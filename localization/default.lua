@@ -422,7 +422,6 @@ return {
 			k_fizz_omega = "Omega",
 			k_fizz_apoc = "Apocryphal",
 			k_fizz_terminus = "Terminus",
-
 		},
 		high_scores = {},
 		labels = {
